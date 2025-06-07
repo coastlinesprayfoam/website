@@ -28,7 +28,7 @@ export default function Home() {
                 <Button asChild size="lg" className="bg-[var(--dark-blue)] text-white hover:bg-[var(--primary-blue)] font-semibold">
                   <Link href="/contact">Get Free Quote</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-[var(--dark-blue)] text-[var(--dark-blue)] hover:bg-[var(--dark-blue)] hover:text-white">
+                <Button asChild size="lg" className="bg-[var(--dark-blue)] text-white hover:bg-[var(--primary-blue)] font-semibold">
                   <a href="tel:3216527465">
                     <Phone className="w-4 h-4 mr-2" />
                     Call Now: (321) 652-7465
