@@ -92,12 +92,9 @@ export default function Contact() {
                   <p className="text-red-800 text-sm mb-3">
                     Need urgent insulation repair or emergency service?
                   </p>
-                  <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
-                    <a href="tel:3216527465">
-                      <Phone className="w-4 h-4 mr-2" />
-                      Emergency: (321) 652-7465
-                    </a>
-                  </Button>
+                  <p className="text-red-800 text-sm">
+                    Call us at <a href="tel:3216527465" className="font-semibold hover:underline">(321) 652-7465</a>
+                  </p>
                 </CardContent>
               </Card>
 

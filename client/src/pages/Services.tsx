@@ -207,7 +207,7 @@ export default function Services() {
             Contact us today for a free consultation and quote on your spray foam insulation project.
           </p>
           <Button asChild size="lg" className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 font-semibold">
-            <Link href="/contact">Get Free Quote</Link>
+            <Link href="/contact">Get Your Free Quote Today</Link>
           </Button>
         </div>
       </section>

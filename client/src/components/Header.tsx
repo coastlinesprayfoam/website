@@ -59,16 +59,13 @@ export function Header() {
             ))}
           </div>
 
-          {/* Phone Button - Desktop */}
+          {/* Quote Button - Desktop */}
           <div className="hidden md:block">
             <Button
               asChild
               className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 font-semibold"
             >
-              <a href="tel:3216527465">
-                <Phone className="w-4 h-4 mr-2" />
-                (321) 652-7465
-              </a>
+              <Link href="/contact">Get Free Quote</Link>
             </Button>
           </div>
 
@@ -107,10 +104,7 @@ export function Header() {
                 asChild
                 className="w-full bg-white text-[var(--dark-blue)] hover:bg-blue-50 mt-4"
               >
-                <a href="tel:3216527465">
-                  <Phone className="w-4 h-4 mr-2" />
-                  (321) 652-7465
-                </a>
+                <Link href="/contact">Get Free Quote</Link>
               </Button>
             </div>
           </div>

@@ -24,15 +24,9 @@ export default function Home() {
               <p className="text-xl mb-8 text-gray-700">
                 Maximize energy efficiency, reduce noise, and improve comfort with our expert spray foam insulation services. Serving Cocoa, Titusville, and surrounding areas.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex justify-start">
                 <Button asChild size="lg" className="bg-[var(--dark-blue)] text-white hover:bg-[var(--primary-blue)] font-semibold">
-                  <Link href="/contact">Get Free Quote</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-[var(--dark-blue)] text-[var(--dark-blue)] hover:bg-[var(--dark-blue)] hover:text-white">
-                  <a href="tel:3216527465">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Now: (321) 652-7465
-                  </a>
+                  <Link href="/contact">Get Your Free Quote Today</Link>
                 </Button>
               </div>
             </div>
@@ -198,17 +192,20 @@ export default function Home() {
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Get a free, no-obligation quote for your spray foam insulation project. Our experts are ready to help you save money and increase comfort.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button asChild size="lg" className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 font-semibold">
-              <Link href="/contact">Get Free Quote</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--dark-blue)]">
-              <a href="tel:3216527465">
-                <Phone className="w-4 h-4 mr-2" />
-                Call: (321) 652-7465
-              </a>
+              <Link href="/contact">Get Your Free Quote Today</Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Small phone reference at bottom */}
+      <section className="bg-gray-100 py-4">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm text-gray-600">
+            Questions? Call us at <a href="tel:3216527465" className="text-[var(--dark-blue)] hover:underline">(321) 652-7465</a>
+          </p>
         </div>
       </section>
     </>
