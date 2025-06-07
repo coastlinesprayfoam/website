@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { SEOHead } from "@/components/SEOHead";
-import { useToast } from "@/hooks/use-toast";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { Input } from "../components/ui/input";
+import { SEOHead } from "../components/SEOHead";
+import { useToast } from "../hooks/use-toast";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
-import { blogPosts } from "@/lib/staticData";
+import { blogPosts } from "../lib/staticData";
 
 // Extended blog posts for static site
 const extendedBlogPosts = [

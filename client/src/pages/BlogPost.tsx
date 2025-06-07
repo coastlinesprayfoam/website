@@ -1,10 +1,10 @@
 
 import { useParams } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { SEOHead } from "@/components/SEOHead";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { SEOHead } from "../components/SEOHead";
 import { Calendar, Clock, ArrowLeft } from "lucide-react";
-import { blogPosts } from "@/lib/staticData";
+import { blogPosts } from "../lib/staticData";
 import { Link } from "wouter";
 
 export default function BlogPost() {

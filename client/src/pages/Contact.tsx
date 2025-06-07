@@ -1,7 +1,7 @@
-import { StaticContactForm } from "@/components/StaticContactForm";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { SEOHead } from "@/components/SEOHead";
+import { StaticContactForm } from "../components/StaticContactForm";
+import { Card, CardContent } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { SEOHead } from "../components/SEOHead";
 import { Phone, Mail, MapPin, Clock, AlertTriangle, CheckCircle } from "lucide-react";
 
 export default function Contact() {
