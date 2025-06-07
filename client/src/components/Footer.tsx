@@ -1,5 +1,13 @@
 import { Link } from "wouter";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Facebook,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 
 export function Footer() {
   return (
@@ -25,16 +33,26 @@ export function Footer() {
               </div>
             </div>
             <p className="text-gray-400 mb-4">
-              Professional spray foam insulation services in Central Florida. Improving energy efficiency and comfort for over 15 years.
+              Professional spray foam insulation services in Central Florida.
+              Improving energy efficiency and comfort for over 5 years.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -45,27 +63,42 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <Link href="/services" className="hover:text-white transition-colors duration-200">
+                <Link
+                  href="/services"
+                  className="hover:text-white transition-colors duration-200"
+                >
                   Residential Insulation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors duration-200">
+                <Link
+                  href="/services"
+                  className="hover:text-white transition-colors duration-200"
+                >
                   Commercial Insulation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors duration-200">
+                <Link
+                  href="/services"
+                  className="hover:text-white transition-colors duration-200"
+                >
                   Attic Insulation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors duration-200">
+                <Link
+                  href="/services"
+                  className="hover:text-white transition-colors duration-200"
+                >
                   Crawl Space Sealing
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors duration-200">
+                <Link
+                  href="/services"
+                  className="hover:text-white transition-colors duration-200"
+                >
                   Energy Audits
                 </Link>
               </li>
@@ -92,7 +125,10 @@ export function Footer() {
               <div className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
                 <div>
-                  <a href="tel:3216527465" className="hover:text-white transition-colors duration-200">
+                  <a
+                    href="tel:3216527465"
+                    className="hover:text-white transition-colors duration-200"
+                  >
                     (321) 652-7465
                   </a>
                   <p className="text-sm">Mon-Fri: 7AM-6PM | Sat: 8AM-4PM</p>
@@ -101,7 +137,10 @@ export function Footer() {
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
                 <div>
-                  <a href="mailto:info@coastlinesprayfoam.com" className="hover:text-white transition-colors duration-200">
+                  <a
+                    href="mailto:info@coastlinesprayfoam.com"
+                    className="hover:text-white transition-colors duration-200"
+                  >
                     info@coastlinesprayfoam.com
                   </a>
                   <p className="text-sm">We respond within 24 hours</p>
@@ -122,16 +161,25 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2023 Coastline Spray Foam Solutions. All rights reserved.
+              © 2025 Coastline Spray Foam Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+              >
                 Sitemap
               </a>
             </div>
