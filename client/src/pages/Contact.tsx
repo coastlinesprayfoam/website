@@ -1,4 +1,4 @@
-import { ContactForm } from "@/components/ContactForm";
+import { StaticContactForm } from "@/components/StaticContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/SEOHead";
@@ -29,7 +29,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <ContactForm />
+              <StaticContactForm />
             </div>
 
             {/* Contact Information */}

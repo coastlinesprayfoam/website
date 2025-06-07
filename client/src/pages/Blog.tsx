@@ -3,39 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { SEOHead } from "@/components/SEOHead";
-import { useMutation } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { blogPosts } from "@/lib/staticData";
 
-const blogPosts = [
-  {
-    id: 1,
-    category: "energy-saving",
-    title: "10 Signs Your Home Needs Better Insulation",
-    excerpt: "Learn to identify the warning signs that indicate your home's insulation is failing and costing you money.",
-    date: "December 10, 2023",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-  },
-  {
-    id: 2,
-    category: "florida",
-    title: "Preparing Your Florida Home for Hurricane Season",
-    excerpt: "How proper insulation can protect your home and improve resilience during Florida's hurricane season.",
-    date: "December 5, 2023",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-  },
-  {
-    id: 3,
-    category: "benefits",
-    title: "How Spray Foam Improves Indoor Air Quality",
-    excerpt: "Explore the health benefits of spray foam insulation and how it creates a cleaner indoor environment.",
-    date: "November 28, 2023",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-  },
+// Extended blog posts for static site
+const extendedBlogPosts = [
+  ...blogPosts,
   {
     id: 4,
     category: "maintenance",
@@ -78,35 +52,19 @@ export default function Blog() {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
 
-  const filteredPosts = blogPosts.filter(
+  const filteredPosts = extendedBlogPosts.filter(
     (post) => activeCategory === "all" || post.category === activeCategory
   );
-
-  const newsletterMutation = useMutation({
-    mutationFn: async (email: string) => {
-      const response = await apiRequest("POST", "/api/newsletter", { email });
-      return response.json();
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Successfully Subscribed!",
-        description: data.message,
-      });
-      setEmail("");
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Subscription Error",
-        description: error.message || "An error occurred while subscribing. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      newsletterMutation.mutate(email);
+      // Static form handling - could integrate with Netlify Forms, Formspree, etc.
+      toast({
+        title: "Thank you for subscribing!",
+        description: "We'll send you the latest insulation tips and energy-saving advice.",
+      });
+      setEmail("");
     }
   };
 
@@ -204,7 +162,9 @@ export default function Blog() {
                     {post.category.replace("-", " ")}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {post.title}
+                    <a href={`/blog/${post.id}`} className="hover:text-[var(--primary-blue)] transition-colors">
+                      {post.title}
+                    </a>
                   </h3>
                   <p className="text-gray-600 mb-4">
                     {post.excerpt}
@@ -237,9 +197,8 @@ export default function Blog() {
                 <Button 
                   type="submit"
                   className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 rounded-l-none font-semibold"
-                  disabled={newsletterMutation.isPending}
                 >
-                  {newsletterMutation.isPending ? "Subscribing..." : "Subscribe"}
+                  Subscribe
                 </Button>
               </form>
             </CardContent>
