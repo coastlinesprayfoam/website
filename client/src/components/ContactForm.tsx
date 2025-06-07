@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -10,7 +9,6 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import { Send } from "lucide-react";
 
 const contactFormSchema = z.object({
@@ -43,30 +41,39 @@ export function ContactForm() {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Quote Request Sent!",
-        description: data.message,
-      });
-      setIsSubmitted(true);
-      reset();
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Error",
-        description: error.message || "An error occurred while sending your request. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
   const onSubmit = (data: ContactFormData) => {
-    contactMutation.mutate(data);
+    // Create email content
+    const subject = "Quote Request from " + data.firstName + " " + data.lastName;
+    const body = `
+New quote request received:
+
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Phone: ${data.phone}
+${data.address ? `Address: ${data.address}` : ''}
+${data.propertyType ? `Property Type: ${data.propertyType}` : ''}
+${data.projectType ? `Project Type: ${data.projectType}` : ''}
+${data.squareFootage ? `Square Footage: ${data.squareFootage}` : ''}
+${data.timeline ? `Timeline: ${data.timeline}` : ''}
+${data.message ? `Message: ${data.message}` : ''}
+
+Please respond to this inquiry as soon as possible.
+    `.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:info@coastlinesprayfoam.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    toast({
+      title: "Email Client Opened",
+      description: "Your email client has opened with the quote request. Please send the email to complete your request.",
+    });
+    
+    setIsSubmitted(true);
+    reset();
   };
 
   if (isSubmitted) {
@@ -243,16 +250,9 @@ export function ContactForm() {
           <Button
             type="submit"
             className="w-full bg-[var(--dark-blue)] hover:bg-[var(--primary-blue)] font-semibold"
-            disabled={contactMutation.isPending}
           >
-            {contactMutation.isPending ? (
-              "Sending..."
-            ) : (
-              <>
-                <Send className="w-4 h-4 mr-2" />
-                Send Quote Request
-              </>
-            )}
+            <Send className="w-4 h-4 mr-2" />
+            Send Quote Request
           </Button>
         </form>
       </CardContent>
