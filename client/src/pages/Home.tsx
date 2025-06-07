@@ -14,21 +14,21 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <section className="gradient-blue hero-pattern text-white">
+      <section className="bg-white text-gray-900">
         <div className="container mx-auto px-4 py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-gray-900">
                 Professional Spray Foam Insulation in Central Florida
               </h1>
-              <p className="text-xl mb-8 text-blue-100">
+              <p className="text-xl mb-8 text-gray-700">
                 Maximize energy efficiency, reduce noise, and improve comfort with our expert spray foam insulation services. Serving Cocoa, Titusville, and surrounding areas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 font-semibold">
+                <Button asChild size="lg" className="bg-[var(--dark-blue)] text-white hover:bg-[var(--primary-blue)] font-semibold">
                   <Link href="/contact">Get Free Quote</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--dark-blue)]">
+                <Button asChild size="lg" variant="outline" className="border-[var(--dark-blue)] text-[var(--dark-blue)] hover:bg-[var(--dark-blue)] hover:text-white">
                   <a href="tel:3216527465">
                     <Phone className="w-4 h-4 mr-2" />
                     Call Now: (321) 652-7465
@@ -38,44 +38,44 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               {/* Vector illustration for fast loading */}
-              <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--light-blue)] rounded-full flex items-center justify-center">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7-7-7 7v11a2 2 0 002 2h3v-7h4v7h3a2 2 0 002-2V9z" />
                       </svg>
                     </div>
-                    <p className="text-sm text-blue-100">Home Insulation</p>
+                    <p className="text-sm text-gray-700 font-medium">Home Insulation</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--light-blue)] rounded-full flex items-center justify-center">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <p className="text-sm text-blue-100">Energy Savings</p>
+                    <p className="text-sm text-gray-700 font-medium">Energy Savings</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--light-blue)] rounded-full flex items-center justify-center">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <p className="text-sm text-blue-100">Quality Work</p>
+                    <p className="text-sm text-gray-700 font-medium">Quality Work</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[var(--light-blue)] rounded-full flex items-center justify-center">
                       <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <p className="text-sm text-blue-100">Fast Service</p>
+                    <p className="text-sm text-gray-700 font-medium">Fast Service</p>
                   </div>
                 </div>
                 <div className="text-center mt-6">
-                  <h3 className="text-xl font-semibold mb-2">Professional Results</h3>
-                  <p className="text-blue-100 text-sm">Up to 50% energy cost reduction</p>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Professional Results</h3>
+                  <p className="text-gray-600 text-sm">Up to 50% energy cost reduction</p>
                 </div>
               </div>
             </div>
