@@ -25,10 +25,10 @@ export default function Home() {
                 Maximize energy efficiency, reduce noise, and improve comfort with our expert spray foam insulation services. Serving Cocoa, Titusville, and surrounding areas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-white text-[var(--primary-blue)] hover:bg-blue-50">
+                <Button asChild size="lg" className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 font-semibold">
                   <Link href="/contact">Get Free Quote</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--primary-blue)]">
+                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--dark-blue)]">
                   <a href="tel:3216527465">
                     <Phone className="w-4 h-4 mr-2" />
                     Call Now: (321) 652-7465

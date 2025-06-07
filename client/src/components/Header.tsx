@@ -23,14 +23,14 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[var(--primary-blue)] shadow-lg">
+    <header className="sticky top-0 z-50 bg-[var(--dark-blue)] shadow-lg">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center mr-3 transition-transform group-hover:scale-105">
               <svg
-                className="w-6 h-6 text-[var(--primary-blue)]"
+                className="w-6 h-6 text-[var(--dark-blue)]"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -63,7 +63,7 @@ export function Header() {
           <div className="hidden md:block">
             <Button
               asChild
-              className="bg-white text-[var(--primary-blue)] hover:bg-blue-50 font-semibold"
+              className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 font-semibold"
             >
               <a href="tel:3216527465">
                 <Phone className="w-4 h-4 mr-2" />
@@ -105,7 +105,7 @@ export function Header() {
               ))}
               <Button
                 asChild
-                className="w-full bg-white text-[var(--primary-blue)] hover:bg-blue-50 mt-4"
+                className="w-full bg-white text-[var(--dark-blue)] hover:bg-blue-50 mt-4"
               >
                 <a href="tel:3216527465">
                   <Phone className="w-4 h-4 mr-2" />
