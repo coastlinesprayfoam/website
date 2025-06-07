@@ -242,7 +242,7 @@ export function ContactForm() {
 
           <Button
             type="submit"
-            className="w-full bg-[var(--primary-blue)] hover:bg-[var(--dark-blue)]"
+            className="w-full bg-[var(--dark-blue)] hover:bg-[var(--primary-blue)] font-semibold"
             disabled={contactMutation.isPending}
           >
             {contactMutation.isPending ? (

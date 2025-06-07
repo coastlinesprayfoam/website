@@ -39,14 +39,43 @@ export default function Home() {
             <div className="hidden md:block">
               {/* Vector illustration for fast loading */}
               <div className="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.4 4.4 0 003 15z" />
-                    </svg>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7-7-7 7v11a2 2 0 002 2h3v-7h4v7h3a2 2 0 002-2V9z" />
+                      </svg>
+                    </div>
+                    <p className="text-sm text-blue-100">Home Insulation</p>
                   </div>
-                  <h3 className="text-2xl font-semibold mb-2">Energy Efficient Homes</h3>
-                  <p className="text-blue-100">Up to 50% reduction in energy costs</p>
+                  <div className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <p className="text-sm text-blue-100">Energy Savings</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <p className="text-sm text-blue-100">Quality Work</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-3 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <p className="text-sm text-blue-100">Fast Service</p>
+                  </div>
+                </div>
+                <div className="text-center mt-6">
+                  <h3 className="text-xl font-semibold mb-2">Professional Results</h3>
+                  <p className="text-blue-100 text-sm">Up to 50% energy cost reduction</p>
                 </div>
               </div>
             </div>
@@ -153,7 +182,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-[var(--primary-blue)] hover:bg-[var(--dark-blue)]">
+            <Button asChild size="lg" className="bg-[var(--dark-blue)] hover:bg-[var(--primary-blue)] font-semibold">
               <Link href="/services">View All Services</Link>
             </Button>
           </div>
@@ -170,10 +199,10 @@ export default function Home() {
             Get a free, no-obligation quote for your spray foam insulation project. Our experts are ready to help you save money and increase comfort.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-[var(--primary-blue)] hover:bg-blue-50">
+            <Button asChild size="lg" className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 font-semibold">
               <Link href="/contact">Get Free Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--primary-blue)]">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--dark-blue)]">
               <a href="tel:3216527465">
                 <Phone className="w-4 h-4 mr-2" />
                 Call: (321) 652-7465

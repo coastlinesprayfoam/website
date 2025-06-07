@@ -151,7 +151,7 @@ export default function Blog() {
                   <Clock className="w-4 h-4 mr-2" />
                   <span>5 min read</span>
                 </div>
-                <Button className="bg-[var(--primary-blue)] hover:bg-[var(--dark-blue)]">
+                <Button className="bg-[var(--dark-blue)] hover:bg-[var(--primary-blue)] font-semibold">
                   Read Full Article
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -177,7 +177,7 @@ export default function Blog() {
                   onClick={() => setActiveCategory(category.id)}
                   className={
                     activeCategory === category.id
-                      ? "bg-[var(--primary-blue)] hover:bg-[var(--dark-blue)]"
+                      ? "bg-[var(--dark-blue)] hover:bg-[var(--primary-blue)] font-semibold"
                       : "hover:bg-gray-100"
                   }
                 >
@@ -236,7 +236,7 @@ export default function Blog() {
                 />
                 <Button 
                   type="submit"
-                  className="bg-white text-[var(--primary-blue)] hover:bg-blue-50 rounded-l-none"
+                  className="bg-white text-[var(--dark-blue)] hover:bg-blue-50 rounded-l-none font-semibold"
                   disabled={newsletterMutation.isPending}
                 >
                   {newsletterMutation.isPending ? "Subscribing..." : "Subscribe"}
