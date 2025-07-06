@@ -1,7 +1,7 @@
 import { Link } from "wouter";
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
-import { SEOHead } from "../components/SEOHead";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { SEOHead } from "@/components/SEOHead";
 import { Phone, Leaf, VolumeX, Shield, Home as HomeIcon, Building, Warehouse, Wrench } from "lucide-react";
 
 export default function Home() {

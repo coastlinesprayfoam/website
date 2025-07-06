@@ -1,5 +1,5 @@
-import { Card, CardContent } from "../components/ui/card";
-import { SEOHead } from "../components/SEOHead";
+import { Card, CardContent } from "@/components/ui/card";
+import { SEOHead } from "@/components/SEOHead";
 import { Award, Handshake, Leaf, IdCard, GraduationCap, Wrench, Star, MapPin, Phone, Navigation } from "lucide-react";
 
 export default function About() {

@@ -1,6 +1,6 @@
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
-import { SEOHead } from "../components/SEOHead";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { SEOHead } from "@/components/SEOHead";
 import { Link } from "wouter";
 import { CheckCircle } from "lucide-react";
 
