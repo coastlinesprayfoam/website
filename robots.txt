@@ -1,0 +1,13 @@
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://coastlinesprayfoam.com/sitemap.xml
+
+# Block access to sensitive files
+Disallow: /scripts/
+Disallow: /*.json$
+Disallow: /package.json
+Disallow: /.replit
+Disallow: /README.md
