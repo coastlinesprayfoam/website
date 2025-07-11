@@ -1,0 +1,38 @@
+
+{
+    "name": "Coastline Spray Foam Solutions",
+    "short_name": "Coastline Spray Foam",
+    "description": "Professional spray foam insulation services in Central Florida",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1e40af",
+    "orientation": "portrait-primary",
+    "categories": ["business", "construction", "home-improvement"],
+    "icons": [
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/assets/screenshot-mobile.jpg",
+            "sizes": "375x812",
+            "type": "image/jpeg",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "/assets/screenshot-desktop.jpg", 
+            "sizes": "1200x800",
+            "type": "image/jpeg",
+            "form_factor": "wide"
+        }
+    ]
+}
