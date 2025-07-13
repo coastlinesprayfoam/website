@@ -1,0 +1,75 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = 'Coastline Spray Foam Solutions offers expert spray foam insulation services in Central East Florida. Save on energy bills and enhance your comfort. Get a free quote today!' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description}>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-gray-50 text-gray-800">
+		<header class="bg-white shadow-md">
+			<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+				<div class="text-2xl font-bold text-teal-500">
+					<a href="/">Coastline Spray Foam</a>
+				</div>
+				<div class="space-x-6">
+					<a href="/" class="text-gray-600 hover:text-teal-500">Home</a>
+					<a href="/about" class="text-gray-600 hover:text-teal-500">About</a>
+					<a href="/services" class="text-gray-600 hover:text-teal-500">Services</a>
+					<a href="/gallery" class="text-gray-600 hover:text-teal-500">Our Work</a>
+					<a href="/faq" class="text-gray-600 hover:text-teal-500">FAQ</a>
+					<a href="/contact" class="text-gray-600 hover:text-teal-500">Contact</a>
+				</div>
+			</nav>
+		</header>
+		<slot />
+		<footer class="bg-gray-800 text-white py-10">
+			<div class="container mx-auto px-6">
+				<div class="grid md:grid-cols-3 gap-8">
+					<div>
+						<h3 class="text-xl font-bold mb-4">Coastline Spray Foam</h3>
+						<p>Your trusted partner for high-performance insulation solutions on the Florida coast.</p>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold mb-4">Quick Links</h3>
+						<ul>
+							<li><a href="/about" class="hover:text-amber-500">About Us</a></li>
+							<li><a href="/services" class="hover:text-amber-500">Services</a></li>
+							<li><a href="/gallery" class="hover:text-amber-500">Our Work</a></li>
+							<li><a href="/contact" class="hover:text-amber-500">Contact Us</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold mb-4">Legal</h3>
+						<ul>
+							<li><a href="/privacy" class="hover:text-amber-500">Privacy Policy</a></li>
+							<li><a href="/terms" class="hover:text-amber-500">Terms & Conditions</a></li>
+							<li><a href="/sitemap" class="hover:text-amber-500">Sitemap</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="text-center mt-8 pt-8 border-t border-gray-700">
+					<p>&copy; {new Date().getFullYear()} Coastline Spray Foam Solutions. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+	body {
+		font-family: 'Inter', sans-serif;
+	}
+</style>
