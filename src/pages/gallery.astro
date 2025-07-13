@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  { id: 1, category: 'Residential', title: 'Melbourne Home Insulation', image: 'https://via.placeholder.com/600x400', description: 'Complete attic and wall insulation for a single-family home.' },
+  { id: 2, category: 'Commercial', title: 'Cocoa Business Center', image: 'https://via.placeholder.com/600x400', description: 'Energy-efficient insulation for a large commercial office space.' },
+  { id: 3, category: 'Attic', title: 'Titusville Attic Seal', image: 'https://via.placeholder.com/600x400', description: 'Air sealing and spray foam insulation in a residential attic.' },
+  { id: 4, category: 'Crawl Space', title: 'Palm Bay Crawl Space', image: 'https://via.placeholder.com/600x400', description: 'Crawl space encapsulation to prevent moisture and mold.' },
+  { id: 5, category: 'Residential', title: 'Rockledge Waterfront Property', image: 'https://via.placeholder.com/600x400', description: 'High-performance insulation for a luxury waterfront home.' },
+  { id: 6, category: 'Commercial', title: 'Merritt Island Retail Store', image: 'https://via.placeholder.com/600x400', description: 'Insulation for a retail storefront to reduce cooling costs.' },
+];
+---
+
+<Layout title="Our Work - Coastline Spray Foam Solutions">
+  <main class="container mx-auto py-20 px-4">
+    <h1 class="text-4xl font-bold text-center mb-12">Our Work</h1>
+
+    <!-- Filter Buttons -->
+    <div class="flex justify-center gap-4 mb-12">
+      <button class="filter-btn bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded" data-filter="all">All</button>
+      <button class="filter-btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" data-filter="Residential">Residential</button>
+      <button class="filter-btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" data-filter="Commercial">Commercial</button>
+      <button class="filter-btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" data-filter="Attic">Attic</button>
+      <button class="filter-btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" data-filter="Crawl Space">Crawl Space</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div id="gallery-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map(project => (
+        <div class={`gallery-item ${project.category} bg-white rounded-lg shadow-md overflow-hidden`}>
+          <img src={project.image} alt={project.title} class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">{project.title}</h3>
+            <p class="text-gray-700">{project.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </main>
+
+<script is:inline>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update button styles
+        filterBtns.forEach(button => {
+          button.classList.remove('bg-teal-500', 'text-white');
+          button.classList.add('bg-gray-300', 'text-gray-800');
+        });
+        btn.classList.remove('bg-gray-300', 'text-gray-800');
+        btn.classList.add('bg-teal-500', 'text-white');
+
+        const filter = btn.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</Layout>

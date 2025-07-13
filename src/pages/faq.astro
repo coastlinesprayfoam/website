@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  { question: 'What is spray foam insulation?', answer: 'Spray foam insulation is a chemical product created by two materials, isocyanate and polyol resin, which react when mixed with each other and expand up to 30-60 times its liquid volume after it is sprayed in place.' },
+  { question: 'What are the main benefits of spray foam insulation?', answer: 'The main benefits include significant energy savings, improved indoor air quality, enhanced comfort, noise reduction, and increased structural integrity.' },
+  { question: 'Is spray foam insulation safe?', answer: 'Yes, when installed by certified professionals, spray foam insulation is safe. We follow strict safety protocols during installation, and the cured foam is inert and non-toxic.' },
+  { question: 'How much can I save on my energy bills?', answer: 'While savings vary, many of our clients see a reduction of 30-50% on their heating and cooling costs.' },
+  { question: 'What is the ROI on spray foam insulation?', answer: 'Spray foam insulation is a long-term investment that typically pays for itself in energy savings over a few years. It also increases the resale value of your property.' },
+];
+---
+
+<Layout title="FAQ - Coastline Spray Foam Solutions">
+  <main class="container mx-auto py-20 px-4">
+    <h1 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h1>
+
+    <div class="max-w-3xl mx-auto">
+      {faqs.map((faq, index) => (
+        <div class="faq-item border-b border-gray-300 py-4">
+          <button class="faq-question w-full text-left text-xl font-semibold flex justify-between items-center">
+            <span>{faq.question}</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer hidden mt-4 text-gray-700">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </main>
+
+<script is:inline>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+
+      question.addEventListener('click', () => {
+        const isVisible = !answer.classList.contains('hidden');
+        answer.classList.toggle('hidden');
+        icon.textContent = isVisible ? '+' : '-';
+      });
+    });
+  </script>
+</Layout>
